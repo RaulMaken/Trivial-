@@ -13,3 +13,6 @@ Quitamos el "=" del metodo "Cuantos jugadores"
 
 ##Problema 2 
 Añadimos un 6 al ArrayList jugadores
+
+##Problema 6
+Extraemos las lineas repetidas a un metodo "if (jugadorActual == jugadores.size()) jugadorActual = 0;"

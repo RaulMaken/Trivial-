@@ -131,12 +131,12 @@ public class Game {
 
                 boolean ganador = jugadorHaGanado();
                 jugadorActual++;
-                if (jugadorActual == jugadores.size()) jugadorActual = 0;
+                jugadorActual0();
 
                 return ganador;
             } else {
                 jugadorActual++;
-                if (jugadorActual == jugadores.size()) jugadorActual = 0;
+                jugadorActual0();
                 return true;
             }
 
@@ -152,10 +152,14 @@ public class Game {
 
             boolean ganador = jugadorHaGanado();
             jugadorActual++;
-            if (jugadorActual == jugadores.size()) jugadorActual = 0;
+            jugadorActual0();
 
             return ganador;
         }
+    }
+
+    private void jugadorActual0() {
+        if (jugadorActual == jugadores.size()) jugadorActual = 0;
     }
 
     public boolean respuestaIncorrecta() {
@@ -164,7 +168,7 @@ public class Game {
         enCasillaCastigo[jugadorActual] = true;
 
         jugadorActual++;
-        if (jugadorActual == jugadores.size()) jugadorActual = 0;
+        jugadorActual0();
         return true;
     }
 
